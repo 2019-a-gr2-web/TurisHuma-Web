@@ -1,4 +1,5 @@
-import {IsEmpty, IsNotEmpty, IsString} from "class-validator"
+import {IsEmpty, IsNotEmpty, IsString, IsNumber,IsOptional} from "class-validator"
+import {Lugar_visitadoEntity} from "../../lugares_visitados/lugar_visitado.entity";
 export class UsuarioCreateDto {
     @IsEmpty()
     id:number;
@@ -18,5 +19,9 @@ export class UsuarioCreateDto {
     @IsNotEmpty()
     @IsString()
     correo_electronico_usuario:string;
+
+    @IsNumber()
+    @IsOptional()
+    lugares_visitados_ID:Lugar_visitadoEntity;
 
 }

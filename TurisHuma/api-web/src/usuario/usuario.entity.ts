@@ -35,8 +35,11 @@ export class UsuarioEntity {
     })
     correo_electronico_usuario:string;
 
+
    @OneToMany(type => Lugar_visitadoEntity,lugar_visitado=>lugar_visitado)
     lugares_visitados:Lugar_visitadoEntity[];
+
+
 
 
 
